@@ -1,0 +1,39 @@
+retrieve_news_task:
+  description: >
+    Conduct a thorough research about {topic}
+    Make sure you find any interesting and relevant information given
+    the current year is {current_year}.
+  expected_output: >
+    The list of 3 websites with the most relevant information about {topic}
+  agent: retrieve_news
+
+# website_scrape_task:
+#   description: >
+#     Scrape the website for the latest news and 
+#     Ensure essential information is captured for further processing.
+#   expected_output: >
+#      scrape the websites intelligently with all the important information from the website.
+#   agent: website_scrapper
+
+
+website_scrape_task:
+  description: >
+    Scrape the website for the latest news and information
+  expected_output: >
+    Fully scraped websites with all the important information from the website.
+  agent: website_scrapper
+
+ai_news_write_task:
+  description: >
+    Write the article to a file in detail with all the information from the previous task.
+  expected_output: >
+    A fully fledged news article with the main topics, each with a full section of information.
+    Formatted as markdown without ```
+  agent: ai_news_writer
+
+file_write_task:
+  description: >
+    Write the news article to a file
+  expected_output: >
+    A fully fledged news article with all information from previous task into a md file.
+  agent: file_writer
