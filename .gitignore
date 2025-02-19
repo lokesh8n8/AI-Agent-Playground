@@ -1,6 +1,0 @@
-.gitignore
-.env
-__pycache__/
-lib/
-.DS_Store
-insta_api_test/
